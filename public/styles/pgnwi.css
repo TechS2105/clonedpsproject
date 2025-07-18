@@ -1,0 +1,46 @@
+.pgnwisection{
+
+    width: 100%;
+    height: 16rem;
+    background-color: #FCEED4; 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.pgnwisection > .pgnwibox{
+
+    width: 25%;
+    height: 50%;
+    border-right: 2px dotted green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    cursor: pointer;
+
+}
+
+.pgnwibox > img{
+
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+
+}
+
+.pgnwibox > p{
+
+    font-size: 18px;
+    color: green;
+    font-weight: 700;
+
+}
+
+.pgnwisection > .pgnwibox:nth-child(5){
+
+    border-right: none;
+
+}

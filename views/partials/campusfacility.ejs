@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/styles/campusfacility.css">
+</head>
+<body>
+
+    <div class="campusfacilitysection">
+
+        <div class="campusfacility">
+
+            <% campusImage.forEach((campusimage) => { %> 
+                
+                <div class="facilitybox">
+
+                    <img src="<%= campusimage.image %>" alt="">
+
+                    <div class="imagescontent">
+
+                        <h3> <%= campusimage.heading %> </h3>
+
+                    </div>
+
+                    <div class="hideimagecontent">
+
+                        <h3> <%= campusimage.boxheading %> </h3>
+                        <p> <%= campusimage.boxcontent.length > 65 ? campusimage.boxcontent.slice(0, 65) : campusimage.boxcontnet %>...
+                        </p>
+                        <a href="#"> Read More <i class="fa-solid fa-arrow-right-long"></i> </a>
+
+                    </div>
+
+                </div>
+                
+            <% }) %>
+           
+
+        </div>
+
+    </div>
+
+    <script src="/js/campusfacility.js"></script>
+
+</body>
+</html>

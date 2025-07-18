@@ -1,0 +1,374 @@
+.newsandeventsection{
+
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+
+}
+
+.newsandeventsection > .newsandeventbox{
+
+    width: 300px;
+    height: 300px;
+
+}
+
+.newsandeventsection > .newsandeventbox img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.newsandeventsection > .newsandeventbox:nth-child(2){
+
+    width: 400px;
+    background-color: #F5F5EF;
+    overflow: hidden;
+
+}
+
+.newsandeventbox:nth-child(2) > .newsheading{
+
+    padding-left: 20px;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.newsandeventbox:nth-child(2) > .newsheading i{
+
+    font-size: 25px;
+
+}
+
+.newsandeventbox:nth-child(2) .newsheading > p{
+
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(0, 78, 0);
+    position: relative;
+
+}
+
+.newsandeventbox:nth-child(2) .newsheading > p::before{
+
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    content: "";
+    height: 3px;
+    width: 50%;
+    background-color: orange;
+
+}
+
+.newsandeventsection .newsandeventbox:nth-child(2) > .newsscroller{
+
+    height: 12rem;
+    overflow: hidden;
+
+}
+
+.newsandeventsection .newsandeventbox:nth-child(2) .newsscroller > ul{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    animation: newsscroller 7s linear infinite;
+    list-style-type: none;
+
+}
+
+@keyframes newsscroller {
+
+    from{
+
+        transform: translateY(130%);
+
+    }to{
+
+        transform: translateY(-130%);
+
+    }
+    
+}
+
+.newsandeventsection .newsandeventbox:nth-child(2) .newsscroller > ul:hover{
+
+    animation-play-state: paused;
+
+}
+
+.newsandeventsection .newsandeventbox:nth-child(2) .newsscroller ul > li {
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1.6px dotted green;
+    width: 80%;
+    padding-bottom: 10px;
+
+}
+
+.newsandeventsection .newsandeventbox:nth-child(2) .newsscroller ul li > .newsdate{
+
+    width: 40px;
+    height: 40px;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.newsandeventbox:nth-child(2) .newsscroller ul li .newsdate > p{
+
+    color: #fff;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 13px;
+
+}
+
+.newsandeventbox:nth-child(2) .newsscroller ul li > .newscontent{
+
+    width: 80%;
+
+}
+
+.newsandeventbox:nth-child(2) .newsscroller ul li .newscontent > p{
+
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.8s ease;
+
+}
+
+.newsandeventbox:nth-child(2) .newsscroller ul li > .newscontent p:hover{
+
+    color:#A2C22A;
+
+}
+
+.newsandeventbox:nth-child(2) .newsscroller ul li > .newsdate p:nth-child(1){
+
+    position: relative;
+    margin-bottom: 5px;
+
+}
+
+.newsandeventbox:nth-child(2) .newsscroller ul li .newsdate > p:nth-child(1)::before{
+
+    position: absolute;
+    top: 18px;
+    left: -3px;
+    width: 25px ;
+    height: 2px;
+    content: "";
+    background-color: #fff;
+
+}
+
+.newsandeventsection > .newsandeventbox:nth-child(3){
+
+    width: 400px;
+    background-color: #F5F5EF;
+    overflow: hidden;
+
+}
+
+.newsandeventbox:nth-child(3) > .campusvideoheading{
+
+    width: 100%;
+    height: 3rem;
+    background-color: #FBEDD3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.campusvideoheading > .videoheading1{
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    padding-left: 20px;
+
+}
+
+.videoheading1 > i{
+
+    font-size: 30px;
+
+}
+
+.campusvideopopup {
+
+    overflow: hidden;
+
+}
+
+.campusvideoheading > .videoheading2{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+    height: 100%;
+
+}
+
+.videoheading2 > i{
+
+    font-size: 30px;
+
+}
+
+.newsandeventbox:nth-child(3) > .campusvideosection{
+
+    width: 100%;
+    height: 16rem;
+    overflow: hidden;
+
+}
+
+.campusvideosection > img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom;
+    cursor: pointer;
+
+}
+
+.newsandeventbox:nth-child(3) .campusvideosection > .campusvideopopup{
+
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 999999999999;
+    top: 0;
+    left: 0;
+
+}
+
+.newsandeventbox:nth-child(3) .campusvideosection .campusvideopopup > .videoheader{
+
+    width: 100%;
+    height: 7%;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.videoheader > .textlogo{
+
+    display: flex;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+
+}
+
+.textlogo > i{
+
+    font-size: 25px;
+    color: orange;
+    cursor: pointer;
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+
+}
+
+.textlogo > p{
+
+    color: yellow;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    cursor: pointer;
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+
+}
+
+.videoheader > .mainlogo{
+
+    width: 30px;
+    height: 80%;
+    padding-right: 20px;
+
+}
+
+.mainlogo > img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.campusvideopopup > .mainvideo{
+
+    width: 100%;
+    height: 93%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.mainvideo > .videobox{
+
+    width: 1000px;
+    height: 600px;
+    box-shadow: 5px 5px 10px #29292962;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+
+}
+
+.videobox > i{
+
+    position: absolute;
+    top: 70px;
+    right: 200px;
+    border: 1px solid green;
+    border-radius: 50px;
+    color: green;
+    font-size: 1.5rem;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
