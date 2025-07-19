@@ -1,0 +1,134 @@
+.latesthappenings{
+
+    width: 100%;
+    height: 40rem;
+    display: flex;
+
+}
+
+.latesthappenings > .box1{
+
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.box1 > .boxcontent{
+
+    height: 20rem;
+    padding-left: 50px;
+    line-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.boxcontent > h2{
+
+    font-size: 100px;
+    line-height: 100px;
+
+}
+
+.boxcontent > a{
+
+    color: green;
+    font-size: 25px;
+    text-decoration: none;
+    position: relative;
+
+}
+
+.boxcontent > a::before{
+
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: orange;
+    content: "";
+    transition: all 0.5s ease;
+
+}
+
+.boxcontent > a:hover::before{
+
+    width: 30%;
+
+}
+
+.boxcontent a > i{
+
+    margin-left: 10px;
+
+}
+
+.latesthappenings > .box2{
+
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.box2 > .swipper-event-card{
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0px 10px;
+
+}
+
+.swipper-event-card > .event-card-box{
+
+    width: 25rem;
+    height: 35rem;
+    box-shadow: 5px 5px 15px #29292942;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.event-card-box > .event-card-image{
+
+    width: 100%;
+    height: 80%;
+
+}
+
+.event-card-image > img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.event-card-box > .event-card-content{
+
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.event-card-content > h4{
+
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+
+}
