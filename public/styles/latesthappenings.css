@@ -89,6 +89,7 @@
 
 }
 
+
 .swipper-event-card > .event-card-box{
 
     width: 25rem;
@@ -97,6 +98,16 @@
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
+    filter: blur(0px);
+    opacity: 1;
+    transition: all 0.8s ease;
+
+}
+
+.swipper-event-card:hover > .event-card-box:not(:hover){
+
+    filter: blur(5px);
+    opacity: 0.5;
 
 }
 

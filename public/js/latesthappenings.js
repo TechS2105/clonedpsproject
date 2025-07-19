@@ -9,6 +9,31 @@ let swipercard = new Swiper('.myswiper', {
 
         delay: 2500
 
+    },
+
+    breakpoints: {
+
+        300: {
+
+            slidesPerView: 1,
+            spaceBetween: 30
+
+        },
+
+        700: {
+
+            slidesPerView: 2,
+            spaceBetween: 30,
+
+        },
+
+        1200: {
+
+            slidesPerView: 2,
+            spaceBetween: 30
+
+        }
+
     }
 
 });
