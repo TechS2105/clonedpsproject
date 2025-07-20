@@ -4,6 +4,10 @@ let videoPopupHeader = document.querySelector(".videoheader");
 let videoBox = document.querySelector(".videobox");
 let videoBoxIframe = document.querySelector(".videobox iframe");
 let videoBoxClose = document.querySelector(".videobox i");
+let newsEventImageBox = document.querySelector(".newseventimage");
+let newsEventImage = document.querySelector(".newseventimage img");
+let newsEventImageClose = document.querySelector(".newseventimage i");
+let firstNewseventBox = document.querySelectorAll(".newsandeventbox img");
 
 campousVideoPopUp.style.transform = "scale(0)";
 campousVideoPopUp.style.opacity = "0";
@@ -16,6 +20,12 @@ videoBox.style.boxShadow = "0px 0px 0px";
 videoBoxClose.style.transform = "scale(0)";
 videoBoxClose.style.filter = "blur(0)";
 videoBoxClose.style.opacity = "0";
+newsEventImageBox.style.transform = "translateY(-1000px)";
+newsEventImageBox.style.opacity = "0";
+newsEventImageBox.style.filter = "blur(0px)";
+newsEventImage.style.transform = "translateY(5000px)";
+newsEventImage.style.opacity = "0";
+newsEventImage.style.filter = "blur(0px)";
 
 
 campusVideo.addEventListener('click', () => {
@@ -57,5 +67,31 @@ videoBoxClose.addEventListener('click', () => {
     campousVideoPopUp.style.opacity = "0";
     campousVideoPopUp.style.filter = "blur(20px)";
     campousVideoPopUp.style.transition = "all 0.8s ease 1s";
+
+});
+
+firstNewseventBox[0].addEventListener('click', () => {
+
+    newsEventImageBox.style.transform = "translateY(0px)";
+    newsEventImageBox.style.transition = "all 1s ease";
+    newsEventImageBox.style.filter = "blur(0px)";
+    newsEventImageBox.style.opacity = "1";
+    newsEventImage.style.transform = "translateY(0px)";
+    newsEventImage.style.transition = "all 1s ease";
+    newsEventImage.style.filter = "blur(0px)";
+    newsEventImage.style.opacity = "1";
+
+});
+
+newsEventImageClose.addEventListener('click', () => {
+
+    newsEventImageBox.style.transform = "translateY(-1000px)";
+    newsEventImageBox.style.transition = "all 2s ease";
+    newsEventImageBox.style.opacity = "0";
+    newsEventImageBox.style.filter = "blur(50px)";
+    newsEventImage.style.transform = "translateY(5000px)";
+    newsEventImage.style.transition = "all 2s ease";
+    newsEventImage.style.filter = "blur(50px)";
+    newsEventImage.style.opacity = "0";
 
 });
