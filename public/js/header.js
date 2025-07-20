@@ -35,9 +35,11 @@ window.addEventListener('scroll', () => {
         firstMenu.style.position = "absolute";
         firstMenu.style.left = "15%";
         firstMenu.style.transition = "all 1.8s ease 0.2s";
+        firstMenuUl.style.gap = "65px";
 
         secondMenuUl.style.paddingRight = "20px";
         secondMenuUl.style.transition = "all 1s ease";
+        secondMenuUl.style.gap = "65px"
         
         for (let i = 0; i < secondMenuLi.length; i++){
 
@@ -74,9 +76,12 @@ window.addEventListener('scroll', () => {
         firstMenu.style.position = 'absolute';
         firstMenu.style.left = "0";
         firstMenu.style.transition = "all 1s ease";
+        firstMenuUl.style.gap = "70px";
+        firstMenuUl.style.transition = "all 1s ease";
 
         secondMenuUl.style.paddingRight = "50px";
         secondMenuUl.style.transition = "all 1s ease";
+        secondMenuUl.style.gap = "70px"
 
         for (let i = 0; i < firstMenuLi.length; i++){
 
@@ -95,3 +100,110 @@ window.addEventListener('scroll', () => {
     }
 
 });
+
+let tableContent = document.querySelectorAll(".menucontenttable table tbody tr td a");
+let tableContentIcon = document.querySelectorAll(".menucontenttable table tbody tr td a i");
+
+for (let i = 0; i < tableContentIcon.length; i++){
+
+    tableContentIcon[i].style.transform = "translateX(-10px) rotate(-90deg)";
+    tableContentIcon[i].style.opacity = "0";
+
+}
+
+for (let i = 0; i < tableContent.length; i++){
+
+    tableContent[i].addEventListener("mouseover", () => {
+
+        tableContentIcon[i].style.transform = "translateX(-10px) rotate(45deg)";
+        tableContentIcon[i].style.opacity = "1";
+        tableContentIcon[i].style.transition = "all 0.8s ease";
+        tableContent[i].style.color = "green";
+
+    })
+
+    tableContent[i].addEventListener("mouseout", () => {
+
+        tableContentIcon[i].style.transform = "tanslateX(-10px) rotate(-90deg)";
+        tableContentIcon[i].style.opacity = "0";
+        tableContentIcon[i].style.marginRight = "0px";
+        tableContentIcon[i].style.transition = "all 0.8s ease";
+        tableContent[i].style.color = "#292929"
+
+    })
+
+}
+
+let firstMenuItems = document.querySelectorAll(".firstmenu ul li");
+
+for (let i = 0; i < firstMenuItems.length; i++){
+
+    let defaultSubMenus = firstMenuItems[i].querySelector('.submenu');
+    let defaultSubMenusImages = firstMenuItems[i].querySelector(".submenu .menuimg img");
+
+    if (defaultSubMenus) {
+        
+        defaultSubMenus.style.opacity = "0";
+        defaultSubMenus.style.transform = "scale(0)";
+        defaultSubMenus.style.transition = "all 0.8s ease";
+
+    }
+
+    if(defaultSubMenusImages){
+
+        defaultSubMenusImages.style.transform = "translateX(-1000px)";
+        defaultSubMenusImages.style.opacity = "0";
+        defaultSubMenusImages.style.filter = "blur(20px)"
+
+    }
+
+}
+
+for (let i = 0; i < firstMenuItems.length; i++){
+
+    let subMenus = firstMenuItems[i].querySelector('.submenu');
+    let subMenuImages = firstMenuItems[i].querySelector(".submenu .menuimg img");
+
+    firstMenuItems[i].addEventListener("mouseover", () => {
+
+        if (subMenus) {
+            
+            subMenus.style.transform = "scale(1)";
+            subMenus.style.opacity = "1";
+            subMenus.style.transition = "all 0.8s ease";
+
+        }
+
+        if (subMenuImages) {
+            
+            subMenuImages.style.transform = "translateX(0px)";
+            subMenuImages.style.opacity = "1";
+            subMenuImages.style.transition = "all 0.8s ease";
+            subMenuImages.style.filter = "blur(0px)";
+
+        }
+
+    });
+
+    firstMenuItems[i].addEventListener('mouseout', () => {
+
+        if (subMenus) {
+            
+            subMenus.style.transform = "scale(0)";
+            subMenus.style.opacity = "0";
+            subMenus.style.transition = "all 0.8s ease";
+
+        }
+
+        if (subMenuImages) {
+            
+            subMenuImages.style.transform = "translateX(-1000px)";
+            subMenuImages.style.opacity = "0";
+            subMenuImages.style.transition = "all 0.8s ease";
+            subMenuImages.style.filter = "blur(20px)";
+
+        }
+
+    })
+
+}
