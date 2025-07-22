@@ -65,7 +65,7 @@ const menubox = [
         listname6: "Age Criteria",
         listname7: "Syllabus for Admission Test",
         listname8: "Prospectus",
-        llstname9: "Assessment/Observation/Interaction/Interview",
+        listname9: "Assessment/Observation/Interaction/Interview",
         listname10: "Rules & Regulations",
         listname11: "Fees Structure",
         listname12: "Pay Fees Online",
@@ -89,7 +89,7 @@ const menubox = [
         listname5: "Library Rule",
         listname6: "Positive Behaviour Management",
         listname7: "Work Activities",
-        llstname8: "Special Assemblies",
+        listname8: "Special Assemblies",
         listname9: "School Magazine",
         buttontext: "Apply Now",
         mobileno: " +91 343 6604402"

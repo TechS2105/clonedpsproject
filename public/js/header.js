@@ -210,6 +210,9 @@ for (let i = 0; i < firstMenuItems.length; i++){
 
     let defaultSubMenus = firstMenuItems[i].querySelector('.submenu');
     let defaultSubMenusImages = firstMenuItems[i].querySelector(".submenu .menuimg img");
+    let prevSubMenuContactBox = firstMenuItems[i].querySelector(".submenu .menucontact .contactbox");
+    let prevSubMenuContentHeading = firstMenuItems[i].querySelector(".submenu .menucontent .menucontentheading");
+    let prevSubMenuTableSection = firstMenuItems[i].querySelector(".submenu .menucontent .menucontenttable");
 
     if (defaultSubMenus) {
         
@@ -227,13 +230,40 @@ for (let i = 0; i < firstMenuItems.length; i++){
 
     }
 
+    if (prevSubMenuContactBox) {
+        
+        prevSubMenuContactBox.style.transform = "translateX(1000px)";
+        prevSubMenuContactBox.style.opacity = "0";
+        prevSubMenuContactBox.style.filter = "blur(20px)";
+
+    }
+
+    if(prevSubMenuContentHeading) {
+
+        prevSubMenuContentHeading.style.transform = "translateY(-500px)";
+        prevSubMenuContentHeading.style.opacity = "0";
+        prevSubMenuContentHeading.style.filter = "blur(20px)";
+
+    }
+
+    if (prevSubMenuTableSection) {
+        
+        prevSubMenuTableSection.style.transform = "translateY(1000px)";
+        prevSubMenuTableSection.style.opacity = "0";
+        prevSubMenuTableSection.style.filter = "blur(20px)";
+
+    }
+
 }
 
 for (let i = 0; i < firstMenuItems.length; i++){
 
     let subMenus = firstMenuItems[i].querySelector('.submenu');
     let subMenuImages = firstMenuItems[i].querySelector(".submenu .menuimg img");
-
+    let subMenuContactBox = firstMenuItems[i].querySelector(".submenu .menucontact .contactbox")
+    let subMenuContentHeading = firstMenuItems[i].querySelector(".submenu .menucontent .menucontentheading")
+    let subMenuTableSection = firstMenuItems[i].querySelector('.submenu .menucontent .menucontenttable');
+ 
     firstMenuItems[i].addEventListener("mouseover", () => {
 
         if (subMenus) {
@@ -248,10 +278,38 @@ for (let i = 0; i < firstMenuItems.length; i++){
             
             subMenuImages.style.transform = "translateX(0px)";
             subMenuImages.style.opacity = "1";
-            subMenuImages.style.transition = "all 0.8s ease";
+            subMenuImages.style.transition = "all 1s ease";
             subMenuImages.style.filter = "blur(0px)";
 
         }
+
+        if (subMenuContactBox) {
+            
+            subMenuContactBox.style.transform = "translateX(0px)";
+            subMenuContactBox.style.transition = "all 1s ease";
+            subMenuContactBox.style.filter = "blur(0px)";
+            subMenuContactBox.style.opacity = "1";
+
+        }
+
+        if(subMenuContentHeading){
+
+            subMenuContentHeading.style.transform = "translateY(0px)";
+            subMenuContentHeading.style.transition = "all 1s ease 0.2s";
+            subMenuContentHeading.style.opacity = "1";
+            subMenuContentHeading.style.filter = "blur(0px)";
+
+        }
+
+        if (subMenuTableSection) {
+            
+            subMenuTableSection.style.transform = "translateY(0px)";
+            subMenuTableSection.style.filter = "blur(0px)";
+            subMenuTableSection.style.opacity = "1";
+            subMenuTableSection.style.transition = "all 1s ease 0.4s";
+
+        }
+
 
     });
 
@@ -269,8 +327,35 @@ for (let i = 0; i < firstMenuItems.length; i++){
             
             subMenuImages.style.transform = "translateX(-1000px)";
             subMenuImages.style.opacity = "0";
-            subMenuImages.style.transition = "all 0.8s ease";
+            subMenuImages.style.transition = "all 1s ease";
             subMenuImages.style.filter = "blur(20px)";
+
+        }
+
+        if (subMenuContactBox) {
+            
+            subMenuContactBox.style.transform = "translateX(1000px)";
+            subMenuContactBox.style.transition = "all 1s ease";
+            subMenuContactBox.style.filter = "blur(20px)";
+            subMenuContactBox.style.opacity = "0";
+
+        }
+
+        if (subMenuContentHeading) {
+            
+            subMenuContentHeading.style.transform = "translateY(-500px)";
+            subMenuContentHeading.style.opacity = "0";
+            subMenuContentHeading.style.filter = "blur(20px)";
+            subMenuContentHeading.style.transition = "all 1s ease 0.2s";
+
+        }
+
+        if(subMenuTableSection){
+
+            subMenuTableSection.style.transform = "translateY(1000px)";
+            subMenuTableSection.style.opacity = "0";
+            subMenuTableSection.style.filter = "blur(20px)";
+            subMenuTableSection.style.transition = "all 1s ease 0.4s"
 
         }
 

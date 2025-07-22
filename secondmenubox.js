@@ -35,7 +35,7 @@ const secondmenubox = [
         listname4: "Video Gallery",
         listname5: "In the News",
         listname6: "Workshop & Training Programs",
-        buttontext: "Aplly Now",
+        buttontext: "Apply Now",
         mobileno: " +91 343 6604402",
 
     },
@@ -50,7 +50,7 @@ const secondmenubox = [
         submenutitle: "Transport",
         listname1: " Air Conditioned Hostel",
         listname2: "Transport",
-        buttontext: "Aplly Now",
+        buttontext: "Apply Now",
         mobileno: " +91 343 6604402",
 
     },
@@ -66,7 +66,7 @@ const secondmenubox = [
         listname1: "Parents Visiting Hours",
         listname2: "Frequently Asked Questions",
         listname3: "Parent Teacher Meeting",
-        buttontext: "Applly Now",
+        buttontext: "Apply Now",
         mobileno: "+91 343 6604402",
 
     },
