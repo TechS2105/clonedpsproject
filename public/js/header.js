@@ -35,21 +35,55 @@ window.addEventListener('scroll', () => {
         firstMenu.style.position = "absolute";
         firstMenu.style.left = "15%";
         firstMenu.style.transition = "all 1.8s ease 0.2s";
-        firstMenuUl.style.gap = "65px";
 
         secondMenuUl.style.paddingRight = "20px";
         secondMenuUl.style.transition = "all 1s ease";
-        secondMenuUl.style.gap = "65px"
         
         for (let i = 0; i < secondMenuLi.length; i++){
 
-            secondMenuLi[i].style.fontSize = "15px";
+            secondMenuLi[i].style.fontSize = "18px";
+            secondMenuLi[i].style.width = "18%";
+            secondMenuLi[i].style.marginRight = "20px";
 
         }
 
         for (let i = 0; i < firstMenuLi.length; i++){
 
-            firstMenuLi[i].style.fontSize = "15px";
+            firstMenuLi[i].style.fontSize = "18px";
+            firstMenuLi[i].style.width = "18%";
+            firstMenuLi[i].style.marginRight = "20px";
+
+        }
+
+        firstMenuLi[3].style.borderRight = "2px dotted green";
+        firstMenuLi[3].style.transition = "all 0.8s ease";
+
+        for (let i = 0; i < firstMenuLi.length; i++){
+
+            let submenuboxes = firstMenuLi[i].querySelector('.submenu');
+
+            firstMenuLi[i].addEventListener("mouseover", () => {
+
+                if (submenuboxes) {
+                    
+                    submenuboxes.style.left = "-23%";
+                    submenuboxes.style.top = "133%"
+
+                }
+
+            });
+
+        }
+
+        for (let i = 0; i < secondMenuLi.length; i++){
+
+            let secondMenuSubMenuSectionBox = secondMenuLi[i].querySelector(".secondsubmenu");
+            
+            secondMenuLi[i].addEventListener("mouseover", () => {
+
+                secondMenuSubMenuSectionBox.style.top = "133%";
+
+            })
 
         }
 
@@ -76,24 +110,60 @@ window.addEventListener('scroll', () => {
         firstMenu.style.position = 'absolute';
         firstMenu.style.left = "0";
         firstMenu.style.transition = "all 1s ease";
-        firstMenuUl.style.gap = "70px";
-        firstMenuUl.style.transition = "all 1s ease";
-
-        secondMenuUl.style.paddingRight = "50px";
-        secondMenuUl.style.transition = "all 1s ease";
-        secondMenuUl.style.gap = "70px"
 
         for (let i = 0; i < firstMenuLi.length; i++){
 
-            firstMenuLi[i].style.fontSize = "15px";
+            firstMenuLi[i].style.fontSize = "18px";
             firstMenuLi[i].style.transition = "all 1s ease";
+            firstMenuLi[i].style.width = "20%";
+            firstMenuLi[i].style.marginRight = "20px";
+            firstMenuLi[i].style.transition = "all 0.8s ease";
+
+        }
+
+        firstMenuLi[3].style.borderRight = "none";
+        firstMenuLi[3].style.transition = "all 0.8s ease";
+
+        for (let i = 0; i < secondMenuLi.length; i++){
+
+            secondMenuLi[i].style.fontSize = "18px";
+            secondMenuLi[i].style.transition = "all 1s ease";
+            secondMenuLi[i].style.width = "18%";
+            secondMenuLi[i].style.marginRight = "20px";
+            secondMenuLi[i].style.transition = "all 0.8s ease";
+
+        }
+
+        for (let i = 0; i < firstMenuLi.length; i++){
+
+            let prevsubmenuboxes = firstMenuLi[i].querySelector('.submenu');
+
+            firstMenuLi[i].addEventListener("mouseover", () => {
+
+                if (prevsubmenuboxes) {
+                    
+                    prevsubmenuboxes.style.left = "7%";
+                    prevsubmenuboxes.style.top = "100%";
+
+                }
+
+            })
 
         }
 
         for (let i = 0; i < secondMenuLi.length; i++){
 
-            secondMenuLi[i].style.fontSize = "15px";
-            secondMenuLi[i].style.transition = "all 1s ease";
+            let secondMenuSubMenuSectionBoxScroll = secondMenuLi[i].querySelector(".secondsubmenu");
+
+            secondMenuLi[i].addEventListener("mouseover", () => {
+
+                if (secondMenuSubMenuSectionBoxScroll) {
+                    
+                    secondMenuSubMenuSectionBoxScroll.style.top = "100%";
+
+                }
+
+            })
 
         }
 
@@ -201,6 +271,47 @@ for (let i = 0; i < firstMenuItems.length; i++){
             subMenuImages.style.opacity = "0";
             subMenuImages.style.transition = "all 0.8s ease";
             subMenuImages.style.filter = "blur(20px)";
+
+        }
+
+    })
+
+}
+
+
+let secondMenuItems = document.querySelectorAll(".secondmenu ul li");
+let secondMenuSubMenuSectionBox = document.querySelectorAll(".secondsubmenu");
+
+for (let i = 0; i < secondMenuSubMenuSectionBox.length; i++){
+
+    secondMenuSubMenuSectionBox[i].style.transform = "scale(0)";
+    secondMenuSubMenuSectionBox[i].style.opacity = "0";
+
+}
+
+for (let i = 0; i < secondMenuItems.length; i++){
+
+    let secondMenuBox = secondMenuItems[i].querySelector(".secondsubmenu");
+
+    secondMenuItems[i].addEventListener("mouseover", () => {
+
+        if(secondMenuBox){
+
+            secondMenuBox.style.transform = "scale(1)";
+            secondMenuBox.style.opacity = "1";
+            secondMenuBox.style.transition = "all 0.8s ease";
+
+        }
+
+    });
+
+    secondMenuItems[i].addEventListener("mouseout", () => {
+
+        if (secondMenuBox) {
+            
+            secondMenuBox.style.transform = "scale(0)";
+            secondMenuBox.style.opacity = "0";
+            secondMenuBox.style.transition = "all 0.8s ease";
 
         }
 

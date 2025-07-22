@@ -189,26 +189,27 @@ header .menusection > .firstmenu{
     display: flex;
     align-items: center;
     list-style-type: none;
-    gap: 70px;
     padding-left: 70px;
 
 }
 
 .firstmenu ul > li{
 
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bolder;
-    position: relative;
     cursor: pointer;
     font-weight: 900;
+    border-right: 2px dotted green;
+    margin-right: 30px;
+    width: 18%;
 
 }
 
 .firstmenu ul li > .submenu{
 
     position: absolute;
-    top: 160%;
-    left: -20%;
+    top: 100%;
+    left: 7%;
     width: 92vw;
     height: 50vh;
     background-color: #FFECC9;
@@ -474,20 +475,9 @@ header .menusection > .firstmenu{
 
 }
 
-.firstmenu ul > li::before{
+.firstmenu ul > li:nth-child(4){
 
-    position: absolute;
-    right: -50px;
-    width: 0.01px;
-    height: 100%;
-    border: 1px dotted green;
-    content: "";
-
-}
-
-.firstmenu ul > li:nth-child(4)::before{
-
-    border: none;
+    border-right: none;
 
 }
 
@@ -515,41 +505,326 @@ header .menusection > .secondmenu{
     align-items: center;
     justify-content: flex-end;
     list-style-type: none;
-    gap: 70px;
-    padding-right: 50px;
 
 }
 
 .secondmenu ul>li {
 
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bolder;
-    position: relative;
     cursor: pointer;
     font-weight: 900;
+    border-right: 2px dotted green;
+    margin-right: 25px;
+    width: 18%;
 
 }
 
-.secondmenu ul>li::before {
+.secondmenu ul>li:nth-child(4) {
 
-    position: absolute;
-    right: -50px;
-    width: 0.01px;
-    height: 100%;
-    border: 1px dotted green;
-    content: "";
-
-}
-
-.secondmenu ul>li:nth-child(4):before {
-
-    border: none;
+    border-right: none;
 
 }
 
 .secondmenu ul li>span {
 
     color: rgb(98, 153, 68);
+
+}
+
+.secondmenu ul li > .secondsubmenu{
+
+    position: absolute;
+    top: 100%;
+    right: 7%;
+    z-index: -2;
+    width: 92vw;
+    height: 50vh;
+    background-color: #FFECC9;
+    box-shadow: 10px 10px 0px rgb(98, 147, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.secondsubmenu > .secondsubmenuimgbox{
+
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px dashed orange;
+
+}
+
+.secondsubmenuimgbox > img{
+
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+
+}
+
+.secondsubmenu > .secondsubmenucontent{
+
+    width: 60%;
+    height: 100%;
+
+}
+
+.secondsubmenucontent > .secondsubmenucontentheading{
+
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.secondsubmenucontentheading > h2{
+
+    padding-left: 50px;
+    position: relative;
+
+}
+
+.secondsubmenucontentheading > h2::before{
+
+    position: absolute;
+    top: 25px;
+    left: 50px;
+    content: "";
+    height: 3px;
+    width: 0%;
+    background-color: rgba(0, 128, 0, 0.4);
+    transition: all 0.8s ease;
+
+}
+
+.secondsubmenucontentheading > h2:hover::before{
+
+    width: 100%;
+
+}
+
+.secondsubmenucontentheading h2 > span {
+
+    color: green;
+
+}
+
+.secondsubmenucontent > .secondsubmenucontentlist{
+
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.secondsubmenucontentlist > .innermenuitem{
+
+    width: 90%;
+    padding-top: 20px;
+
+}
+
+.innermenuitem > table{
+
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.innermenuitem table tbody tr > td{
+
+    padding-bottom: 5px;
+
+}
+
+.innermenuitem table tbody tr td > a{
+
+    color: #292929;
+    text-decoration: none;
+    display: inline-flex;
+    transition: all 0.8s ease;
+    font-weight: 100;
+    font-size: 15px;
+
+}
+
+.innermenuitem table tbody tr td > i{
+
+    margin-right: 0px;
+    transition: all 0.8s ease;
+    opacity: 0;
+
+}
+
+.innermenuitem table tbody tr td > a:hover{
+
+    color: green;
+
+}
+
+.innermenuitem table tbody tr td:hover > i{
+
+    opacity: 1;
+    margin-right: 5px;
+    color: green;
+    transform: rotate(45deg);
+
+}
+
+.secondsubmenu > .secondsubmenuapplysection{
+
+    width: 20%;
+    height: 100%;
+    border-left: 2px dashed orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.secondsubmenuapplysection > .contactbox{
+
+    background-color: #fff;
+    height: 80%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.contactbox > .buttondiv{
+
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.buttondiv > button{
+
+    width: 150px;
+    height: 40px;
+    background-color: green;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 99999999;
+
+}
+
+.buttondiv > button:hover{
+
+    color: #fff;
+
+}
+
+.buttondiv > button::before{
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: orange;
+    content: "";
+    transition: all 0.8s ease;
+    z-index: -2;
+
+}
+
+.buttondiv > button:hover::before{
+
+    height: 100%;;
+
+}
+
+.buttondiv button > a{
+
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+
+}
+
+.contactbox > .divider{
+
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.divider > p{
+
+    font-size: 25px;
+    color: green;
+    position: relative;
+
+}
+
+.divider > p::before{
+
+    position: absolute;
+    top: 20px;
+    left: -100px;
+    content: "";
+    background-color: orange;
+    width: 80px;
+    height: 3px;
+
+}
+
+.divider > p::after{
+
+    position: absolute;
+    top: 20px;
+    right: -100px;
+    content: "";
+    background-color: orange;
+    width: 80px;
+    height: 3px;
+
+}
+
+.contactbox > .contactdiv{
+
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contactdiv > p{
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: green;
+
+}
+
+.contactdiv p > i{
+
+    color: orange;
 
 }
 
