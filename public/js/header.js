@@ -355,7 +355,7 @@ for (let i = 0; i < firstMenuItems.length; i++){
             subMenuTableSection.style.transform = "translateY(1000px)";
             subMenuTableSection.style.opacity = "0";
             subMenuTableSection.style.filter = "blur(20px)";
-            subMenuTableSection.style.transition = "all 1s ease 0.4s"
+            subMenuTableSection.style.transition = "all 1s ease 0.4s";
 
         }
 
@@ -363,20 +363,69 @@ for (let i = 0; i < firstMenuItems.length; i++){
 
 }
 
+/** Second Menu Box Sections */
 
 let secondMenuItems = document.querySelectorAll(".secondmenu ul li");
 let secondMenuSubMenuSectionBox = document.querySelectorAll(".secondsubmenu");
 
-for (let i = 0; i < secondMenuSubMenuSectionBox.length; i++){
+for (let i = 0; i < secondMenuItems.length; i++){
 
-    secondMenuSubMenuSectionBox[i].style.transform = "scale(0)";
-    secondMenuSubMenuSectionBox[i].style.opacity = "0";
+    let secondMenuSubMenuSectionBox = secondMenuItems[i].querySelector('.secondsubmenu');
+    let secondSubMenuImageBox = secondMenuItems[i].querySelector('.secondsubmenu .secondsubmenuimgbox img');
+    let secondSubMenuContactSection = secondMenuItems[i].querySelector('.secondsubmenuapplysection .contactbox');
+    let secondSubMenuContactSectionHeading = secondMenuItems[i].querySelector('.secondsubmenucontent .secondsubmenucontentheading');
+    let secondSubMenuTableSection = secondMenuItems[i].querySelector('.secondsubmenucontentlist .innermenuitem')
+
+    if(secondMenuSubMenuSectionBox){
+
+        secondMenuSubMenuSectionBox.style.transform = "scale(0)";
+        secondMenuSubMenuSectionBox.style.opacity = "0";
+
+    }
+
+    if(secondSubMenuImageBox){
+
+        secondSubMenuImageBox.style.transform = "translateX(-1000px)";
+        secondSubMenuImageBox.style.opacity = "0";
+        secondSubMenuImageBox.style.filter = "blur(20px)";
+
+    }
+
+    if (secondSubMenuContactSection) {
+        
+        secondSubMenuContactSection.style.transform = "translateX(1000px)";
+        secondSubMenuContactSection.style.opacity = "0";
+        secondSubMenuContactSection.style.filter = "blur(20px)";
+
+    }
+
+    if(secondSubMenuContactSectionHeading){
+
+        secondSubMenuContactSectionHeading.style.transform = "translateY(-500px)";
+        secondSubMenuContactSectionHeading.style.filter = "blur(20px)";
+        secondSubMenuContactSectionHeading.style.opacity = "0";
+
+    }
+
+    if(secondSubMenuTableSection){
+
+        secondSubMenuTableSection.style.transform = "translateY(1000px)";
+        secondSubMenuTableSection.style.filter = "blur(20px)";
+        secondSubMenuTableSection.style.opacity = "0";
+
+    }
 
 }
 
 for (let i = 0; i < secondMenuItems.length; i++){
 
     let secondMenuBox = secondMenuItems[i].querySelector(".secondsubmenu");
+    let secondSubMenuImgBox = secondMenuItems[i].querySelector(".secondsubmenu .secondsubmenuimgbox img");
+    let secondSubMenuContactBox = secondMenuItems[i].querySelector(
+      ".secondsubmenuapplysection .contactbox"
+    );
+    let secondSubMenuHeadingSection = secondMenuItems[i].querySelector('.secondsubmenucontent .secondsubmenucontentheading');
+    let secondSubMenuTableSection = secondMenuItems[i].querySelector('.secondsubmenucontentlist .innermenuitem');
 
     secondMenuItems[i].addEventListener("mouseover", () => {
 
@@ -385,6 +434,42 @@ for (let i = 0; i < secondMenuItems.length; i++){
             secondMenuBox.style.transform = "scale(1)";
             secondMenuBox.style.opacity = "1";
             secondMenuBox.style.transition = "all 0.8s ease";
+
+        }
+
+        if(secondSubMenuImgBox){
+
+            secondSubMenuImgBox.style.transform = "translateX(0px)";
+            secondSubMenuImgBox.style.transition = "all 1s ease";
+            secondSubMenuImgBox.style.opacity = "1";
+            secondSubMenuImgBox.style.filter = "blur(0px)";
+
+        }
+
+        if (secondSubMenuContactBox) {
+            
+            secondSubMenuContactBox.style.transform = "translateX(0px)";
+            secondSubMenuContactBox.style.transition = "all 1s ease";
+            secondSubMenuContactBox.style.opacity = "1";
+            secondSubMenuContactBox.style.filter = "blur(0px)";
+
+        }
+
+        if (secondSubMenuHeadingSection) {
+            
+            secondSubMenuHeadingSection.style.transform = "translateY(0px)";
+            secondSubMenuHeadingSection.style.transition = "all 1s ease 0.2s";
+            secondSubMenuHeadingSection.style.opacity = "1";
+            secondSubMenuHeadingSection.style.filter = "blur(0px)";
+
+        }
+
+        if(secondSubMenuTableSection){
+
+            secondSubMenuTableSection.style.transform = "translateY(0px)";
+            secondSubMenuTableSection.style.transition = "all 1s ease 0.4s";
+            secondSubMenuTableSection.style.opacity = "1";
+            secondSubMenuTableSection.style.filter = "blur(0px)";
 
         }
 
@@ -400,6 +485,42 @@ for (let i = 0; i < secondMenuItems.length; i++){
 
         }
 
-    })
+        if (secondSubMenuImgBox) {
+            
+            secondSubMenuImgBox.style.transform = "translateX(-1000px)";
+            secondSubMenuImgBox.style.opacity = "0";
+            secondSubMenuImgBox.style.filter = "blur(20px)";
+            secondSubMenuImgBox.style.transition = "all 1s ease";
+
+        }
+
+        if (secondSubMenuContactBox) {
+            
+            secondSubMenuContactBox.style.transform = "translateX(1000px)";
+            secondSubMenuContactBox.style.opacity = "0";
+            secondSubMenuContactBox.style.filter = "blur(20px)";
+            secondSubMenuContactBox.style.transition = "all 1s ease";
+
+        }
+
+        if (secondSubMenuHeadingSection) {
+            
+            secondSubMenuHeadingSection.style.transform = "translateY(-500px)";
+            secondSubMenuHeadingSection.style.transition = "all 1s ease 0.4s";
+            secondSubMenuHeadingSection.style.opacity = "0";
+            secondSubMenuHeadingSection.style.filter = "blur(20px)"
+
+        }
+
+        if (secondSubMenuTableSection) {
+            
+            secondSubMenuTableSection.style.transform = "translateY(1000px)";
+            secondSubMenuTableSection.style.transition = "all 1s ease";
+            secondSubMenuTableSection.style.filter = "blur(20px)";
+            secondSubMenuTableSection.style.opacity = "0";
+
+        }
+
+    });
 
 }

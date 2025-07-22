@@ -560,6 +560,7 @@ header .menusection > .secondmenu{
     align-items: center;
     justify-content: center;
     border-right: 2px dashed orange;
+    overflow: hidden;
 
 }
 
@@ -584,6 +585,7 @@ header .menusection > .secondmenu{
     height: 30%;
     display: flex;
     align-items: flex-end;
+    overflow: hidden;
 
 }
 
@@ -625,6 +627,7 @@ header .menusection > .secondmenu{
     height: 70%;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 
 }
 
@@ -691,6 +694,7 @@ header .menusection > .secondmenu{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
 }
 
