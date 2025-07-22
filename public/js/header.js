@@ -524,3 +524,35 @@ for (let i = 0; i < secondMenuItems.length; i++){
     });
 
 }
+
+let seachIcon = document.querySelector(".socialicons ul li #p04");
+let searchBoxBack = document.querySelector(".searchboxback");
+let searchMainBox = document.querySelector(".searchboxback .searchbox");
+let searchNavigation = document.querySelector(".seachnvigation i");
+
+searchBoxBack.style.transform = "translateX(100%)";
+searchBoxBack.style.opacity = "0";
+searchMainBox.style.transform = "translateX(100%)";
+searchMainBox.style.opacity = "0";
+
+seachIcon.addEventListener("click", () => {
+
+    searchBoxBack.style.transform = "translateX(0%)";
+    searchBoxBack.style.transition = "all 0.8s ease";
+    searchBoxBack.style.opacity = "1";
+    searchMainBox.style.transform = "translateX(0%)";
+    searchMainBox.style.transition = "all 0.8s ease 0.2s";
+    searchMainBox.style.opacity = "1";
+
+});
+
+searchNavigation.addEventListener("click", () => {
+
+    searchBoxBack.style.transform = "translateX(100%)";
+    searchBoxBack.style.transition = "all 0.8s ease 0.2s";
+    searchBoxBack.style.opacity = "0";
+    searchMainBox.style.transform = "translateX(100%)";
+    searchMainBox.style.transition = "all 0.8s ease";
+    searchMainBox.style.opacity = "0";
+
+})
