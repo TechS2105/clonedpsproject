@@ -242,6 +242,178 @@ header > .socialiconsection{
 
 }
 
+.searchbox > .searchinputbox{
+
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.searchinputbox > .searchpara{
+
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.searchpara > p{
+
+    padding-left: 20px;
+
+}
+
+.searchinputbox > .searchinput{
+
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.searchinput > input{
+
+    margin-left: 20px;
+    width: 440px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 40px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: none;
+    border: 1px solid grey;
+
+}
+
+.searchinput > input::placeholder{
+
+    font-size: 15px;
+    color: gray;
+
+}
+
+.searchinput > button{
+
+    width: 100px;
+    height: 40px;
+    background-color: yellowgreen;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+
+}
+
+.searchbox > .popularpages{
+
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.popularpages > .popularpageheading{
+
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+
+}
+
+.popularpageheading > h3{
+
+    padding-left: 20px;
+    font-size: 25px;
+
+}
+
+.popularpageheading h3 > span{
+
+    color: green;
+    position: relative;
+
+}
+
+.popularpageheading h3 > span::before{
+
+    position: absolute;
+    top: 35px;
+    right: 0;
+    height: 3px;
+    background-color: green;
+    content:  "";
+    width: 120%;
+
+
+}
+
+.popularpages > .popularpagesname{
+
+    width: 100%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+
+}
+
+.popularpagesname > ul {
+
+    list-style-type: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+
+}
+
+.popularpagesname ul li {
+
+    padding: 20px 0px;
+    border-bottom: 2px dotted green;
+
+}
+
+.popularpagesname ul li > a{
+
+    text-decoration: none;
+    color: #292929;
+
+}
+
+.popularpagesname ul li > a:hover{
+
+    color: green;
+
+}
+
+.popularpagesname ul li a > i{
+
+    transition: all 0.8s ease;
+    opacity: 0;
+    margin-right: -10px;
+
+}
+
+.popularpagesname ul li a:hover > i{
+
+    transform:  rotate(45deg);
+    margin-right: 10px;
+    opacity: 1;
+
+}
+
 header > .menusection{
 
     width: 100%;
